@@ -1,0 +1,9 @@
+====== Linux ======
+
+{{indexmenu>.|tsort nsort navbar}}
+
+//Click below to add a new page to this space ...//
+
+  * [[dwagon:linux:New Page]]
+
+{{tag>linux}}

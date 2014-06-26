@@ -1,0 +1,12 @@
+====== Python ======
+
+A collection of notes on the [[http://www.python.org/|Python]] programming
+language.
+
+{{indexmenu>.|tsort nsort navbar}}
+
+//Click below to add a new page to this space ...//
+
+  * [[dwagon:python:New Page]]
+
+{{tag>python}}

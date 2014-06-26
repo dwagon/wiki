@@ -1,0 +1,9 @@
+====== Games ======
+
+{{indexmenu>.#1|tsort msort}}
+
+//Click below to add a new page to this space ...//
+
+  * [[dwagon:games:New Page]]
+
+{{tag>games}}

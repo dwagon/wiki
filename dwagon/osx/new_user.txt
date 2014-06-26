@@ -1,0 +1,25 @@
+To create a new user on a mac without using the GUI do the following as root:
+<code>
+dscl . -create /Users/<USER>
+dscl . -create /Users/<USER> UserShell /bin/zsh
+dscl . -create /Users/<USER> UniqueID <UID>
+dscl . -create /Users/<USER> PrimaryGroupID <GID>
+dscl . -create /Users/<USER> NFSHomeDirectory /Users/<USER>
+mkdir /Users/<USER>
+chown -R <USER>:<GROUP> /Users/<USER>
+</code>
+
+To get the next available UID:
+
+<code>
+dscl . -list /Users UniqueID | awk '{ print $2 }' | sort -n
+</code>
+
+A similar thing can be done with creating groups by substituting ''/Groups'' instead of ''/Users'' in the dscl commands.
+
+To stop the new user appearing in the login list (e.g. for service accounts)
+<code>
+defaults write /Library/Preferences/com.apple.loginwindow HiddenUsersList -array-add <USER>
+</code>
+
+{{tag>osx}}

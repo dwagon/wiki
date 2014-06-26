@@ -1,0 +1,16 @@
+<columns 100% left 50% right>
+
+== Contents ==
+{{indexmenu>.|tsort nsort navbar}}
+
+<newcolumn justify>
+
+== Tags ==
+
+~~TAGCLOUD~~
+
+== Keywords ==
+
+~~CLOUD~~
+
+</columns>
