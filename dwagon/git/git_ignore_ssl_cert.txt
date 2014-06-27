@@ -1,0 +1,12 @@
+Occassionally you will need to talk to a git server that has an expired, self-signed, etc cert
+
+Permanently
+<code>
+git config http.sslVerify false
+</code>
+
+Once off:
+
+<code>
+git -c http.sslVerify=false clone http.....
+</code>

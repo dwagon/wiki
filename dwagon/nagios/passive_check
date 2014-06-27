@@ -1,0 +1,15 @@
+How to update a passive service from a remote system.
+
+A message will need to be sent to the nagios server (currently: aumelrhnag01.fitness2live.net.au.) in the following format
+<code>
+"HOSTNAME\tNAGIOSSERVICE\tSTATE\tMESSAGE"
+</code>
+An example:
+<code>
+"aumelubops03\texample-check-name\t0\tEverything is OK"
+</code>
+
+An example in shell script will look like the following:
+<code>
+echo -e "$(hostname --fqdn)\tbackup-service\t0\tBackup sucessful" | /usr/sbin/send_nsca -H nagios
+</code>

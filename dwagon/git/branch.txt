@@ -1,0 +1,56 @@
+=== Rename a branch ===
+<code>
+git branch -m <oldname> <newname>
+</code>
+
+If you want to rename the current branch, you can simply do:
+<code>
+git branch -m <newname>
+</code>
+
+=== Delete a branch ===
+== Local branch only ==
+<code>
+git branch -d <branchname>
+</code>
+
+== Remote branch ==
+<code>
+git push origin --delete <branchname>
+</code>
+
+=== Listing Branches ===
+<code>
+git branch
+</code>
+Include remote branches
+<code>
+git branch -a
+</code>
+
+=== Creating a branch ===
+<code>
+git checkout -b <branchname>
+</code>
+
+== Creating a remote branch ==
+<code>
+git push -u origin <branchname>
+</code>
+
+=== Squashing a branch ===
+How to squash collapse all the commits in a branch into a single commit.
+<code>
+git checkout <target branch>
+git pull
+git merge --squash <feature branch>
+git commit
+</code>
+ 
+From Git merge
+
+ --squash
+ --no-squash
+ Produce the working tree and index state as if a real merge happened (except for the merge information), but do not actually make a commit or move the HEAD, nor record $GIT_DIR/MERGE_HEAD to cause the next git commit command to create a merge commit. This allows you to create a single commit on top of the current branch whose effect is the same as merging another branch (or more in case of an octopus).
+  
+From http://stackoverflow.com/questions/3697178/git-merge-all-changes-from-another-branch-as-a-single-commit
