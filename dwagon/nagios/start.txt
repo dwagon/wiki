@@ -1,0 +1,10 @@
+====== Nagios ======
+Nagios (nee Netsaint) monitoring
+
+{{indexmenu>.|tsort nsort navbar}}
+
+//Click below to add a new page to this space ...//
+
+  * [[dwagon:nagios:New Page]]
+
+{{tag>nagios}}
