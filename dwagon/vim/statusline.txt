@@ -1,0 +1,21 @@
+In .vimrc
+
+<code>
+set statusline=<stuff>
+</code>
+
+To always display statusline:
+<code>
+set laststatus=2
+</code>
+
+Things that can go in <stuff>:
+  * %c - Column number
+  * %l - Line number
+  * %L - Number of lines in file
+  * %P - Position (e.g. top, bot, all)
+  * %t - Name of file
+  * %= - Justify rest to the right
+  * %y - File type
+
+{{tag>vim}}
