@@ -1,0 +1,9 @@
+=== Adding a swap file ===
+
+<code>
+fallocate -l 1024M /swapfile0
+mkswap /swapfile0
+swapon /swapfile0
+</code>
+
+{{tag>linux}}
