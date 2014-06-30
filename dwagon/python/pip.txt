@@ -1,0 +1,5 @@
+=== get-pip ===
+PIP bootstrapper
+https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py
+
+{{tag>python}}
