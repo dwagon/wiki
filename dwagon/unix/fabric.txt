@@ -1,0 +1,26 @@
+Fabric (http://www.fabfile.org) is a great toolkit for automation and is much more than just ssh on steroids.
+
+Normally you develop scripts which are invoked by calling "fab <task> -H <hostname>" but occassionally it is nice to be able to wrap the whole thing in a single script and in essence hide the fabric from the user.
+
+<code>
+from fabric.main import main
+from fabric.api import task
+
+@task()
+def dostuff():
+    stuff
+
+
+if __name__=="__main__":
+    sys.argv = ["fab","-f", __file__, 'dostuff", '-H', sys.argv[1]]
+    main()
+</code>
+
+Alternatively
+<code>
+if __name__ == '__main__':
+    from fabric.main import main as fabric_main
+    fabric_main(fabfile_locations=[__file__])
+</code>
+
+{{tag>fabric}}
