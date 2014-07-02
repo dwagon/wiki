@@ -1,0 +1,9 @@
+====== Puppet ======
+
+{{indexmenu>.|tsort nsort navbar}}
+
+//Click below to add a new page to this space ...//
+
+  * [[dwagon:puppet:New Page]]
+
+{{tag>puppet}}

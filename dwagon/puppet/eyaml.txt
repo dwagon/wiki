@@ -1,0 +1,10 @@
+=== Encrypted Yaml ===
+
+Allows a mix of encrypted and plain text yaml in the same file
+
+https://github.com/TomPoulton/hiera-eyaml
+
+See also: [[dwagon:unix:gpg]]
+
+
+{{tag>puppet}}
