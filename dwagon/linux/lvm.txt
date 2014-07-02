@@ -1,0 +1,27 @@
+=== Growing a filesystem ===
+
+Rescan the SCSI bus
+<code>
+echo 1 | /sys/class/scsi_disk/*/device/rescan
+</code>
+
+<code>
+cfdisk /dev/sda
+partprobe
+pvcreate /dev/sda6
+pvdisplay -s
+pvs
+vgextemd ubuntu /dev/sda6
+lvextend -L+nG /dev/ubuntu/root
+resize2fs /dev/mapper/ubuntu-root
+</code>
+
+=== Growing Swap ===
+<code>
+swapoff /dev/ubuntu/swap_1
+lvresize -L+nG /dev/ubuntu/swap_1
+mkswap /dev/ubuntu/swap_1
+swapon /dev/ubuntu/swap_1
+</code>
+
+{{tag>linux}}

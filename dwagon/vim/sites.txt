@@ -1,5 +1,6 @@
 Some good vim related sites:
 
+  * http://zzapper.co.uk/vimtips.html - Some cool tips for advanced players
   * http://vimawesome.com - Bundles for vim
   * http://neovim.org - New implementation of vim
 
