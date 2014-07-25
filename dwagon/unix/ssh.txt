@@ -1,0 +1,9 @@
+== SSH Bounce through ==
+
+```
+Host 10.0.0.*
+    ForwardAgent yes
+    ProxyCommand ssh -W %h:%p <proxybox>
+```
+
+{{tag>unix}}
