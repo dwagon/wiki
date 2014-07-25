@@ -1,0 +1,16 @@
+== Randomize kickoff time ==
+To stop a lot of cron jobs on multiple machines starting off at the same time put something like this in each of the cron lines
+
+```
+ minute => fqdn_rand(59, $::fqdn),
+```
+
+If you have many jobs on the same server that you need to spread then try:
+
+```
+ minute => fqdn_rand(59, "$::fqdn $::name")
+```
+
+This will spread the load if each server is hitting the same source, or is hosted on the same infrastructure (e.g. esx server)
+
+{{tag>puppet}}
