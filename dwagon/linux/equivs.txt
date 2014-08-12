@@ -1,0 +1,43 @@
+== Fake out debian packages ==
+
+If you need to satisfy a package dependency and don't actually want to install the package.
+Firstly, don't - it will cause issues later.
+
+Secondly use equivs
+
+# apt-get install equivs
+% equivs-control fakepkg
+
+Edit the fakepkg control file
+
+```
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 
+
+Package: postgresql
+Version: 8.4
+Maintainer: Dougal Scott <dougal.scott@gmail.com>
+# Pre-Depends: <comma-separated list of packages>
+# Depends: <comma-separated list of packages>
+# Recommends: <comma-separated list of packages>
+# Suggests: <comma-separated list of packages>
+# Provides: <comma-separated list of packages>
+# Replaces: <comma-separated list of packages>
+Architecture: all
+# Copyright: <copyright file; defaults to GPL2>
+# Changelog: <changelog file; defaults to a generic changelog>
+# Readme: <README.Debian file; defaults to a generic one>
+# Extra-Files: <comma-separated list of additional files for the doc directory>
+# Files: <pair of space-separated paths; First is file to include, second is destination>
+#  <more pairs, if there's more than one file to include. Notice the starting space>
+Description: Fake out postgresql 8.4 for befit
+ Fake out postgresql 8.4 for befit
+```
+
+% equivs-build fakepkg
+This should result in fakepkg.deb which you can install as per normal
