@@ -1,0 +1,13 @@
+=== public key error ===
+When you get the error:
+```
+The following signatures couldn't be verified because they public key in not available ...
+```
+Then run:
+<code>
+gpg --keyserver pgpkeys.mit.edu --recv-key  $PUBKEY      
+gpg -a --export $PUBKEY | sudo apt-key add -
+</code>
+
+{{tag>linux}}
+
