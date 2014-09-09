@@ -6,4 +6,9 @@ mkswap /swapfile0
 swapon /swapfile0
 </code>
 
+and add the following to fstab
+<code>
+/swapfile0 swap swap defaults 0 0
+</code>
+
 {{tag>linux}}
